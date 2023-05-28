@@ -5,6 +5,52 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; not in solution */
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.footer {
+  background-color: #eeeeee;
+}
+
+.content {
+  /* align-self: center; not in solution*/
+  display: flex;
+  flex-direction: column;
+  /* below was in solution not in  mine*/
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* need to remember this is magnificent at making use 
+  of the whole space possible onlu useful after setting a height for the container */
+}
+
+.input, .buttons {
+  align-self: center;
+}
+
+/* .left-links, .right-links {  they were smarter with ther selector choice*/
+  ul { 
+    display: flex;
+    gap: 16px;
+    /* list-style-type: none; they did not really use this but below */
+    list-style: none;
+    
+    /*  in solution not in mine */
+    margin: 0; /* okay this solved the issue of having a margin
+    for the left side list and unbeknowst to me the left side of the right links*/
+    padding: 0;  
+}
+
+a {
+  text-decoration: none;
+  color: #666;
 }
 
 img {
@@ -16,6 +62,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px 16px; /* in solution not in mine */
 }
 
 input {
